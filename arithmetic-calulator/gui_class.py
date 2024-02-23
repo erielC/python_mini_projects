@@ -1,0 +1,25 @@
+import tkinter as tk
+
+class MyGUI:
+    def __init__(self):
+        self.window = tk.Tk()
+        
+        self.title = self.window.title("Arithmetic Calculator")
+        
+        self.label = tk.Label(self.window, text="Arithmetic Calculator", font=("Arial", 24))
+        self.label.pack(padx=10, pady=10)
+        
+        self.textbox = tk.Text(self.window, height=2, width=70, font=("Arial", 24))
+        self.textbox.pack(padx=10, pady=10)
+        
+        self.button = tk.Button(self.window, text="Calculate", font=("Arial", 24))
+        self.button.pack(padx=10, pady=10)
+        
+        
+        self.window.mainloop()
+
+    def add_button(self):
+        button = tk.Button(self.window, text="+", font=("Arial", 24))
+        button.pack(padx=10, pady=10)
+        
+MyGUI()
