@@ -1,20 +1,20 @@
-class Calculator:
-    def __init__(self, number_one, number_two):
-        self.one = number_one
-        self.two = number_two
-    
-    def add(self):
-        print(self.one + self.two)
-    
-    def subtract(self):
-        print(self.one - self.two)
-    
-    def multiply(self):
-        print(self.one * self.two)
-    
-    def divide(self):
-        # Attempt to catch division by zero error
-        try:
-            print(self.one / self.two)
-        except ZeroDivisionError:
-            print("0")
+import tkinter as tk
+
+class Calculator: 
+    def __init__(self):
+        """
+        Initializes a new instance of the Calculator class.
+        """
+        self.root = tk.Tk()
+        self.geometry = self.root.geometry("800x600")
+        self.root.title("Arithmetic Calculator")
+        
+        buttomframe = tk.Frame(self.root)
+        buttomframe.columnconfigure(0, weight=1)
+        buttomframe.columnconfigure(1, weight=1)
+        buttomframe.columnconfigure(2, weight=1)
+            
+        self.btn1 = tk.Button(buttomframe, text="1", font=("Arial", 24))
+        self.root.mainloop()
+            
+Calculator()

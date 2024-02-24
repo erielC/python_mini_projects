@@ -1,10 +1,9 @@
 import math
+import tkinter as tk
 from calculator import Calculator
 
 # Prompt the user what operation will be completed starting off with the four basic functions first
 operation = int(input("What operation with you be using today?\n[1] Add \n[2] Subtract \n[3] Multiply \n[4] Divide \n"))
-a = int(input("Enter the first number: "))
-b = int(input("Enter the second number: "))
 calc = Calculator(a, b)
 
 if operation == 1:
